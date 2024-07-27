@@ -1,0 +1,121 @@
+/* UploadForm.module.css */
+
+.uploadForm {
+    max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 27px 18px rgba(0, 0, 0, 0.39);
+  background-color: #0e0d0dab;
+  backdrop-filter: blur(10px);
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #b3b1b1;
+  }
+  
+  .uploadArea {
+    border: 2px dashed #626363a4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #9b9a9a6e;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 15px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .uploadAreaDragover {
+    background-color: #e9ecef;
+    border-color: #0056b3;
+  }
+  
+  .uploadAreaText {
+    margin: 0;
+    font-size: 16px;
+    color: #b3b1b1;
+  }
+  
+  .hiddenInput {
+    display: none;
+  }
+  
+  .label {
+    display: block;
+    margin: 0px 0 5px;
+    font-weight: bold;
+    color: #716d6d;
+    font-size: 10px;
+  }
+  .inputBox{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0.5px solid #575656;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  .numberInput,
+  .selectInput {
+    width: 100%;
+    border: 1px solid #e9e6e6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px;
+    background: none;
+    border: none;
+    color: #b3b1b1;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .button {
+    background-color: #5c5a5a;
+    color: #b3b1b1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #171718;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    background-color: #6a070791;
+  padding: 3px;
+  border-radius: 3px;
+  }
+  
+  .img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  .imgSize{
+    font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #605d5d;
+  padding: 5px;
+  width: 9rem;
+  text-align: center;
+  border-radius: 5px;
+  }

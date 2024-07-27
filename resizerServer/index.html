@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask WebSocket</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #070707;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            background-image: url("wow.png");
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .time {
+            font-size: 60px;
+            font-weight: bold;
+            color: #f4f5f7;
+        }
+
+        p {
+            font-size: 18px;
+            color: #6c757d;
+            height: 50%;
+            background-color: #292a2b;
+            width: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Background to make the blur visible */
+            backdrop-filter: blur(10px);
+            mix-blend-mode: multiply;
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var socket = io.connect('http://localhost:5000' );
+            
+            socket.on('connect', function() {
+                console.log('Connected to server');
+            });
+
+            socket.on('time_update', function(msg) {
+                // console.log('Time from server: ' + msg.time);
+                document.getElementById('time').textContent = msg.time;
+            });
+
+            socket.on('server_message', function(msg) {
+                console.log(msg.data);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+   <p id="time" class="time"></p>
+</body>
+</html>
